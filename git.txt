@@ -1,0 +1,42 @@
+Git-шпаргалка
+git clone https://github.com/<my_username>/<fork>.git
+git status
+git log
+git hist
+q exit log/hist
+git remote -v
+git remote add upstream git://github.com/<user>/<repka>.git
+git branch <branch_name>
+git checkout <branch_name>
+git add <file_name>
+git commit -m "<comment>"
+git push -f origin <branch_name>
+gitk
+
+Обновить форк
+git fetch upstream
+git checkout master
+git rebase upstream/master
+git push origin
+git checkout <branch_name>
+git merge master
+git push --set-upstream origin <branch_name>
+
+Отменить запушенный коммит — пропадет из хистори (опасно)
+Делайте с осторожностью, если ваш проект есть хотя бы в 2 местах (eg на серваке)…
+git push -f origin <hash>:<branch>
+git reset --hard <hash>
+
+Удалить всю хистори репки и залить единственный с локалки (полезно если вы храните бинарники в репке (ай-ай-ай) и периодически хочется репку сделать поменьше).. как обычно, опасно ататат ололол:
+
+git checkout --orphan new_branch создаем новую ветку без хистори
+
+git add -A добавляем все (А) текущие файлы туда
+
+git commit -am "сommit message" коммитим
+
+git branch -D master удаляем старую ветку «мастер»
+
+git branch -m master переименовываем новую ветку в мастера
+
+git push -f origin master форс-пушим
