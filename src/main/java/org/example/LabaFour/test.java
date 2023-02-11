@@ -1,2 +1,4 @@
-package org.example.LabaFour;public class test {
+package org.example.LabaFour;
+
+public class test {
 }
