@@ -1,0 +1,32 @@
+package com.example;
+
+public class Parent {
+    protected int x = 10;
+
+    protected void printX() {
+        System.out.println(x);
+    }
+}
+
+package com.example;
+
+public class Child extends Parent {
+    public void accessParentX() {
+        System.out.println(x); // can access protected variable x from parent class
+    }
+    public void accessParentMethod() {
+        printX(); // can access protected method from parent class
+    }
+}
+
+package com.anotherpackage;
+
+import com.example.Parent;
+
+public class AnotherClass {
+    public void test() {
+        Parent p = new Parent();
+        System.out.println(p.x); // compile error, cannot access protected variable x
+        p.printX(); // compile error, cannot access protected method
+    }
+}
