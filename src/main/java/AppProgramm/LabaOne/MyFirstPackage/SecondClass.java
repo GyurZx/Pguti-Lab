@@ -1,4 +1,4 @@
-package AppProgramm.LabaOne.MyFirstClass;
+package AppProgramm.LabaOne.MyFirstPackage;
 
 public class SecondClass {
     private int firstNum;
@@ -25,7 +25,7 @@ public class SecondClass {
         return secondNum;
     }
 
-    public int sum() {
+    public int sum(int firstNum, int secondNum) {
         return this.firstNum + this.secondNum;
     }
 }

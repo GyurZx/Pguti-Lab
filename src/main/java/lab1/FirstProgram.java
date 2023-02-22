@@ -1,8 +1,8 @@
-package AppProgramm.LabaOne;
+package lab1;
 
-import AppProgramm.LabaOne.MyFirstPackage.*;
+import lab1.MyFirstPac.SecondClass;
 
-class FirstClass {
+class FirstProgram {
     public static void main(String[] args) {
         System.out.println("Hello Java!");
         SecondClass o = new SecondClass();
@@ -21,5 +21,3 @@ class FirstClass {
         }
     }
 }
-
-
